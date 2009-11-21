@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<application xmlns="http://ns.adobe.com/air/application/2.0beta">
+
+	<supportedProfiles>desktop mobileDevice</supportedProfiles>
+		
+	<iPhone>
+	
+		<!-- aditya's -->
+		<bundleSeedID>NUCF6YW57D</bundleSeedID>
+	
+		<!-- Ethan's -->
+		<!--<bundleSeedID>VX725G83J6</bundleSeedID>-->
+	
+		<!--
+		<InfoAdditions>
+			<![CDATA[
+				<key>CTRenderEngine</key>
+				<string>GLES1</string>
+			]]>
+		</InfoAdditions>
+		-->
+	</iPhone>
+
+	<id>TweetCards</id>
+	<filename>TweetCards</filename>
+	<name>TweetCards</name>
+	<version>v1</version>
+	<!-- <description></description> -->
+	<!-- <copyright></copyright> -->
+
+	<initialWindow>
+
+		<autoOrients>false</autoOrients>
+		<fullScreen>false</fullScreen>
+		<aspectRatio>portrait</aspectRatio>
+		<content>TweetCards.swf</content>
+		<!-- <title></title> -->
+		<systemChrome>none</systemChrome>
+		<!-- <transparent></transparent> -->
+		<visible>true</visible>
+		<!-- <minimizable></minimizable> -->
+		<!-- <maximizable></maximizable> -->
+		<resizable>false</resizable>
+		<width>320</width>
+		<height>460</height>
+		<!-- <x></x> -->
+		<!-- <y></y> -->
+		<!-- <minSize></minSize> -->
+		<!-- <maxSize></maxSize> -->
+	</initialWindow>
+
+	<!-- <installFolder></installFolder> -->
+	<!-- <programMenuFolder></programMenuFolder> -->
+	<icon>
+		<image57x57>Icon.png</image57x57>
+	</icon>
+
+	<!-- <customUpdateUI></customUpdateUI> -->
+	<!-- <allowBrowserInvocation></allowBrowserInvocation> -->
+	<!-- <fileTypes> -->
+		<!-- Defines one file type. Optional. -->
+		<!-- <fileType> -->
+			<!-- The name that the system displays for the registered file type. Required. -->
+			<!-- <name></name> -->
+			<!-- The extension to register. Required. -->
+			<!-- <extension></extension> -->
+			<!-- The description of the file type. Optional. -->
+			<!-- <description></description> -->
+			<!-- The MIME content type. -->
+			<!-- <contentType></contentType> -->
+			<!-- The icon to display for the file type. Optional. -->
+			<!-- <icon>
+				<image16x16></image16x16>
+				<image32x32></image32x32>
+				<image48x48></image48x48>
+				<image128x128></image128x128>
+			</icon> -->
+		<!-- </fileType> -->
+	<!-- </fileTypes> -->
+
+</application>
