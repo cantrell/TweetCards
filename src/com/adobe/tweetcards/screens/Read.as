@@ -16,7 +16,6 @@
 	import flash.display.Sprite;
 	import flash.events.KeyboardEvent;
 	import flash.events.MouseEvent;
-	import flash.events.TouchEvent;
 	import flash.ui.Keyboard;
 	
 	public class Read extends Screen
@@ -34,7 +33,7 @@
 		public function Read()
 		{
 			super();
-			this.addEventListener(TouchEvent.TOUCH_TAP, onMouseDown);
+			this.addEventListener(MouseEvent.MOUSE_DOWN, onMouseDown);
 			this.draw();
 		}
 
@@ -81,7 +80,7 @@
 			this.stage.removeEventListener(KeyboardEvent.KEY_DOWN, onKeyDown);
 		}
 
-		private function onMouseDown(e:TouchEvent):void
+		private function onMouseDown(e:MouseEvent):void
 		{
 			if ((e.stageX < 105) && (e.stageY > ModelLocator.APP_HEIGHT - 41))
 			{
@@ -95,8 +94,7 @@
 			}
 		}
 
-		//private function onCardMouseDown(e:MouseEvent):void
-		private function onCardMouseDown(e:TouchEvent):void
+		private function onCardMouseDown(e:MouseEvent):void
 		{
 			//if (this.moving) return;
 			if (this.moving)
@@ -108,11 +106,10 @@
 			this.fingerTracker = e.stageX;
 		}
 
-		//private function onCardMouseMove(e:MouseEvent):void
-		private function onCardMouseMove(e:TouchEvent):void
+		private function onCardMouseMove(e:MouseEvent):void
 		{
 			//if (!e.buttonDown || this.moving) return;
-			//if (!e.buttonDown) return;
+			if (!e.buttonDown) return;
 			if (this.cardContainer != null)
 			{
 				var delta:int = e.stageX - this.fingerTracker;
@@ -121,8 +118,7 @@
 			}
 		}
 
-		//private function onCardMouseUp(e:MouseEvent):void
-		private function onCardMouseUp(e:TouchEvent):void
+		private function onCardMouseUp(e:MouseEvent):void
 		{
 			//if (this.moving) return;
 			if ((this.cardContainerX - this.cardContainer.x) == 0)
@@ -185,16 +181,10 @@
 			this.cardContainer.x = this.cardContainerX;
 			this.cardContainer.y = 55;
 
-			/*
 			this.cardContainer.addEventListener(MouseEvent.MOUSE_DOWN, onCardMouseDown);
 			this.cardContainer.addEventListener(MouseEvent.MOUSE_MOVE, onCardMouseMove);
 			this.cardContainer.addEventListener(MouseEvent.MOUSE_UP, onCardMouseUp);
-			*/
 
-			this.cardContainer.addEventListener(TouchEvent.TOUCH_BEGIN, onCardMouseDown);
-			this.cardContainer.addEventListener(TouchEvent.TOUCH_MOVE, onCardMouseMove);
-			this.cardContainer.addEventListener(TouchEvent.TOUCH_END, onCardMouseUp);
-			
 			this.addChild(this.cardContainer);
 			this.cardX = 0;
 		}

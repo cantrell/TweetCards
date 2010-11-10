@@ -21,31 +21,31 @@ package com.adobe.tweetcards.model
 		public static const DIRECT_MESSAGE_TYPE:uint = 2;
 		public static const PICTURE_SIZE:uint = 50;
 
-		[Embed(source="assets/background.png")]
+		[Embed(source="/assets/background.png")]
 		public var background:Class;
 
-		[Embed(source="assets/title_card.png")]
+		[Embed(source="/assets/title_card.png")]
 		public var titleCard:Class;
 
-		[Embed(source="assets/card_background.png")]
+		[Embed(source="/assets/card_background.png")]
 		public var cardBackground:Class;
 
-		[Embed(source="assets/sign_in_button.png")]
+		[Embed(source="/assets/sign_in_button.png")]
 		public var signInButtonSkin:Class;
 
-		[Embed(source="assets/cancel_button.png")]
+		[Embed(source="/assets/cancel_button.png")]
 		public var cancelButtonSkin:Class;
 
-		[Embed(source="assets/tweet_button.png")]
+		[Embed(source="/assets/tweet_button.png")]
 		public var tweetButtonSkin:Class;
 
-		[Embed(source="assets/load_more_button.png")]
+		[Embed(source="/assets/load_more_button.png")]
 		public var loadMoreButtonSkin:Class;
 
-		[Embed(source="assets/menubar_short.png")]
+		[Embed(source="/assets/menubar_short.png")]
 		public var menuBarShortSkin:Class;
 
-		[Embed(source="assets/talk_bubble.png")]
+		[Embed(source="/assets/talk_bubble.png")]
 		public var talkBubble:Class;
 
 		private var so:SharedObject;
